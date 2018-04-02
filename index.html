@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <title>train schedule</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class ="jumbotron">
+    <div class="container">
+        <h1> Anywhere Train Schedule </h1>
+        </div>
+      <div class="container">
+    
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <h4 class="card-header">Add Train</h4>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="search-term">Train Name</label>
+                <input type="text" class="form-control" id="TrainName" placeholder="Enter the name of your train">
+                <small class="form-text text-muted">Required</small>
+              </div>
+              <div class="form-group">
+                <label for="train-destination">Train Destination</label>
+                <input type="number" class="form-control" id="TrainDestination" placeholder="Enter Your Destination">
+                <small class="form-text text-muted">Not required - will default to 10</small>
+              </div>
+              <div class="form-group">
+                <label for="train-time">First Train Time</label>
+                <input type="number" class="form-control" id="trainTimeNum" placeholder="Enter first train time">
+                <small class="form-text text-muted">HH:mm Format</small>
+              </div>
+              <div class="form-group">
+                <label for="frequency">frequency</label>
+                <input type="number" class="form-control" id="frequencyNum" aria-describedby="article number" placeholder="How often does this train run">
+                <small class="form-text text-muted">HH:mm</small>
+              </div>
+              <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+  
+  <p></p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Add Train</th>
+        <th>Train Name</th>
+        <th>Destination</th>
+        <th>First Train Time</th>
+        <th>Frequency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>North East Corridor</td>
+        <td>Trenton</td>
+        <td>00:30</td>
+      </tr>
+      <tr>
+        <td>Midnight Express</td>
+        <td>Penn Station</td>
+        <td>00:01</td>
+      </tr>
+      <tr>
+        <td>Coastliner</td>
+        <td>Philadelphia</td>
+        <td>01:00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
