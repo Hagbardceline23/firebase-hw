@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
     <title>train schedule</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    
 </head>
 <body>
-    <div class ="jumbotron">
+    <div class ="jumbotron">I
     <div class="container">
         <h1> Anywhere Train Schedule </h1>
         </div>
@@ -28,18 +28,18 @@
                 <small class="form-text text-muted">Required</small>
               </div>
               <div class="form-group">
-                <label for="train-destination">Train Destination</label>
-                <input type="number" class="form-control" id="TrainDestination" placeholder="Enter Your Destination">
-                <small class="form-text text-muted">Not required - will default to 10</small>
+                <label for="search-term">Train Destination</label>
+                <input type="text" class="form-control" id="TrainDestination" placeholder="Enter Your Destination">
+                <small class="form-text text-muted">Please enter a train destination</small>
               </div>
               <div class="form-group">
-                <label for="train-time">First Train Time</label>
-                <input type="number" class="form-control" id="trainTimeNum" placeholder="Enter first train time">
+                <label for="search-term">First Train Time</label>
+                <input type="text" class="form-control" id="trainTimeNum" placeholder="Enter the time that the first train leaves">
                 <small class="form-text text-muted">HH:mm Format</small>
               </div>
               <div class="form-group">
-                <label for="frequency">frequency</label>
-                <input type="number" class="form-control" id="frequencyNum" aria-describedby="article number" placeholder="How often does this train run">
+                <label for="search-term">frequency</label>
+                <input type="text" class="form-control" id="frequencyNum" aria-describedby="article number" placeholder="How often does this train run">
                 <small class="form-text text-muted">HH:mm</small>
               </div>
               <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
@@ -50,7 +50,7 @@
 
   
   <p></p>            
-  <table class="table">
+  <table class="table" id='info-table'>
     <thead>
       <tr>
         <th>Add Train</th>
@@ -79,6 +79,7 @@
     </tbody>
   </table>
 </div>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./firebase.js"></script>
 </body>
 </html>
