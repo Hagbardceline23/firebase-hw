@@ -17,7 +17,7 @@ $(document).ready(function(){
     //I don't think that event.preventDefault (); is needed here.
   
 
-  var trainName = $('#trainName').val('');
+  var trainName = $('#trainName').val();
   //now make sure that the form field is cleared
 
      $('#trainName').val('');
@@ -49,12 +49,13 @@ $(document).ready(function(){
   
   database.ref().push(newTrainData);
 
-  database.ref().on("child_added", function(childSnapshot, prevChildKey){
-console.log(childSnapshot.val());
-  });
-
-  $("#info-table > tbody").append ("<tr><td>" + trainName + "</td></tr>");
-    
-     
+  
+  
+  
 });
+    database.ref().on("child_added", function(childSnapshot, prevChildKey){
+      console.log(childSnapshot.val().trainName);
+      $("#info-table > tbody").append("<tr><td>" + childSnapshot.val().trainName + "</td><td>" + childSnapshot.val().trainDestination + "</td><td>" + childSnapshot.val().firstTrainTime + "</td></tr>");
+  // console.log(childSnapshot.val());
+    });
 });
